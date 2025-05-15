@@ -45,6 +45,7 @@ ul li {
 ul li a {
   color: rgb(0, 0, 0);
   text-decoration: none;
+  font-family: Arial, sans-serif;
   font-size: 30px;
   padding: 10px 15px;
   display: inline-block;
@@ -124,7 +125,7 @@ ul li a.active {
 
 .content h1,p {
   color: #ffffff; /* warna abu tua untuk judul */
-  font-family: 'Comic Sans MS', sans-serif;
+  font-family: sans-serif;
 font-size: 40px;
 }
 
