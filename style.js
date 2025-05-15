@@ -80,7 +80,6 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
     }
 
-    const nomorAdmin = '6285791436166';
     let pesanWA = `Halo Admin, saya *${nama}*.\n` +
                   `No WA: *${whatsapp}*\n` +
                   `Alamat: *${alamat}*\n`;
@@ -88,7 +87,16 @@ document.addEventListener('DOMContentLoaded', function () {
     if (pertanyaan) pesanWA += `Pertanyaan:\n${pertanyaan}\n`;
     if (pesanan) pesanWA += `Pesanan:\n${pesanan}`;
 
-    const urlWA = `https://wa.me/${nomorAdmin}?text=${encodeURIComponent(pesanWA)}`;
+    const encodedPesan = encodeURIComponent(pesanWA);
+
+    // Daftar nomor admin
+    const adminNumbers = ['6285791436166', '6287845202348'];
+
+    // Kirim ke semua admin
+    adminNumbers.forEach(nomor => {
+      const urlWA = `https://wa.me/${nomor}?text=${encodedPesan}`;
+      window.open(urlWA, '_blank');
+    });
 
     output.innerHTML = `
       <div class="struk">
@@ -99,7 +107,6 @@ document.addEventListener('DOMContentLoaded', function () {
         ${pesanan ? `<p><strong>Pesanan:</strong> ${pesanan}</p>` : ''}
       </div>
     `;
-
-    window.open(urlWA, '_blank');
   });
 });
+
