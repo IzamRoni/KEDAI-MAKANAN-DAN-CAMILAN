@@ -90,8 +90,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
            if (pertanyaan !== '') {
     pesanWA += `Pertanyaan:\n${pertanyaan}\n`;
-
-    pesanWA += `Pesanan:\n${pesanan}`;
   }
 
         const urlWA = `https://wa.me/${nomorAdmin}?text=${encodeURIComponent(pesanWA)}`;
