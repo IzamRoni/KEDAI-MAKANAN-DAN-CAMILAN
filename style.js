@@ -62,7 +62,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // === KONTAK (kontak.html): Validasi Form dan Tampilkan Pesan ===
-<script>
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.querySelector('#formKontak');
   const output = document.querySelector('#output');
