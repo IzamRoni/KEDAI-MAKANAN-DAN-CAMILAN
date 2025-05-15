@@ -141,20 +141,28 @@ document.addEventListener('DOMContentLoaded', function () {
     const admin = form.querySelector('select[name="admin"]').value;
 
     if (nama === '' || whatsapp === '' || alamat === '') {
-      alert('Kolom wajib (nama, WA, alamat) harus diisi.');
+      alert('Kolom wajib (Nama, WA, dan Alamat) harus diisi.');
       return;
     }
 
+    // Format pesan WhatsApp
     let pesanWA = `Halo Admin, saya *${nama}*.\n` +
                   `No WA: *${whatsapp}*\n` +
                   `Alamat: *${alamat}*\n`;
 
-    if (pertanyaan) pesanWA += `Pertanyaan:\n${pertanyaan}\n`;
-    if (pesanan) pesanWA += `Pesanan:\n${pesanan}`;
+    if (pertanyaan) {
+      pesanWA += `Pertanyaan:\n${pertanyaan}\n`;
+    }
 
+    if (pesanan) {
+      pesanWA += `Pesanan:\n${pesanan}`;
+    }
+
+    // URL WhatsApp ke admin yang dipilih
     const urlWA = `https://wa.me/${admin}?text=${encodeURIComponent(pesanWA)}`;
     window.open(urlWA, '_blank');
 
+    // Tampilkan struk di halaman
     output.innerHTML = `
       <div class="struk">
         <h3>Terima kasih, ${nama}!</h3>
@@ -162,7 +170,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <p><strong>Alamat:</strong> ${alamat}</p>
         ${pertanyaan ? `<p><strong>Pertanyaan:</strong> ${pertanyaan}</p>` : ''}
         ${pesanan ? `<p><strong>Pesanan:</strong> ${pesanan}</p>` : ''}
-        <p><em>Pesanan telah dikirim ke Admin pilihan.</em></p>
+        <p><em>Pesanan telah dikirim ke admin pilihan: ${admin}</em></p>
       </div>
     `;
   });
