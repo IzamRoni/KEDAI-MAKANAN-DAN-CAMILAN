@@ -97,7 +97,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const urlWA = `https://wa.me/${nomorAdmin}?text=${encodeURIComponent(pesanWA)}`;
 
-    // Tampilkan struk hanya isi yang diisi user
     output.innerHTML = `
       <div class="struk">
         <h3>Terima kasih, ${nama}!</h3>
