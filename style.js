@@ -72,6 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const nama = form.querySelector('input[name="nama"]').value.trim();
         const whatsapp = form.querySelector('input[name="wa"]').value.trim();
         const alamat = form.querySelector('input[name="Alamat"]').value.trim();
+        const pertanyaan = form.querySelector('input[name="pertanyaan"]').value.trim();
         const pesanan = form.querySelector('textarea[name="pesan"]').value.trim();
 
         if (nama === '' || whatsapp === '' || alamat === '' || pesanan === '') {
@@ -85,7 +86,13 @@ document.addEventListener('DOMContentLoaded', function () {
           `Halo Admin, saya *${nama}*.\n` +
           `No WA: *${whatsapp}*\n` +
           `Alamat: *${alamat}*\n` +
-          `Pesanan:\n${pesanan}`;
+        
+            if (pertanyaan !== '') {
+      pesanWA += `Pertanyaan:\n${pertanyaan}\n`;
+    }
+
+    pesanWA += `Pesanan:\n${pesanan}`;
+
 
         const urlWA = `https://wa.me/${nomorAdmin}?text=${encodeURIComponent(pesanWA)}`;
 
@@ -95,6 +102,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <h3>Terima kasih, ${nama}!</h3>
             <p><strong>WhatsApp:</strong> ${whatsapp}</p>
             <p><strong>Alamat:</strong> ${alamat}</p>
+             ${pertanyaan ? `<p><strong>Pertanyaan:</strong> ${pertanyaan}</p>` : ''}
             <p><strong>Pesanan:</strong> ${pesanan}</p>
           </div>
         `;
