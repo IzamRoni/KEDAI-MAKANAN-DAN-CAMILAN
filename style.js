@@ -113,4 +113,3 @@ document.addEventListener('DOMContentLoaded', function () {
     window.open(urlWA, '_blank');
   });
 });
-</script>
