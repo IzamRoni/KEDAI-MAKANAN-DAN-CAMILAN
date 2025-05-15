@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KEDAI CAMILAN MINUMAN</title>
+  <title>KEDAI MAKANAN DAN CAMILAN</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -13,7 +13,7 @@
     
 <nav class="navbar"></nav>  
     <header class="logo-header">
-  <h1 class="logo-text">KEDAI CAMILAN-MINUMAN</h1>
+  <h1 class="logo-text">KEDAI MAKANAN, CAMILAN, MINUMANA </h1>
 </header>
     <ul>
       <li><a href="index.html">Beranda</a></li>
@@ -61,36 +61,35 @@
       </ul>
     </div>
 
-    <div class="kontak-form">
-      <h2>PESAN DI SINI</h2><br>
-    <form id="formKontak" action="#" method="post">
-      <label for="nama">Nama Lengkap</label>
-      <input type="text" id="nama" name="nama" placeholder="Nama Anda" required />
+  <div class="kontak-form">
+  <h2>PESAN DI SINI</h2><br>
+  <form id="formKontak" action="#" method="post">
+    <label for="nama">Nama Lengkap</label>
+    <input type="text" id="nama" name="nama" placeholder="Nama Anda" required />
 
-      <label for="wa">Nomor WhatsApp</label>
-      <input type="tel" id="wa" name="wa" placeholder="08xxxxxxxxxx" pattern="08[0-9]{8,12}" required />
+    <label for="wa">Nomor WhatsApp</label>
+    <input type="tel" id="wa" name="wa" placeholder="08xxxxxxxxxx" pattern="08[0-9]{8,12}" required />
 
-      <label for="Alamat">Alamat</label>
-      <input type="text" id="Alamat" name="Alamat" placeholder="Alamat Anda" required />
-      
-      <label for="pertanyaan">Pertanyaan</label>
-      <input type="text" id="pertanyaan" name="pertanyaan" placeholder="pertanyaan" />
+    <label for="Alamat">Alamat</label>
+    <input type="text" id="Alamat" name="Alamat" placeholder="Alamat Anda" required />
 
-      <label for="pesan">Pesanan</label>
-      <textarea id="pesan" name="pesan" rows="5" placeholder="Tulis pesan Anda..."></textarea>
+    <label for="pertanyaan">Pertanyaan</label>
+    <input type="text" id="pertanyaan" name="pertanyaan" placeholder="pertanyaan" />
 
-      <button type="submit">Kirim Pesanan</button>
-    </form>
-  </div>
+    <label for="pesan">Pesanan</label>
+    <textarea id="pesan" name="pesan" rows="5" placeholder="Tulis pesan Anda..."></textarea>
 
-  <div id="output"></div>
+    <label for="admin">Pilih Admin:</label>
+    <select name="admin" id="admin" required>
+      <option value="6285791436166">Fika (WA: 085791436166)</option>
+      <option value="6287845202348">izam (WA: 087845202348")</option>
+    </select>
 
-  </section>
-  <label for="admin">Pilih Admin:</label>
-<select name="admin" id="admin">
-  <option value="6285791436155">Admin 1 (WA: 6285791436155)</option>
-  <option value="6287845202348">Admin 2 (WA: 6287845202348)</option>
-</select>
+    <button type="submit">Kirim Pesanan</button>
+  </form>
+</div>
+
+<div id="output"></div>
 
 
 <script src="style.js"></script>
