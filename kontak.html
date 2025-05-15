@@ -51,6 +51,99 @@
   <section class="kontak-container">
     <div class="kontak-info">
       <h2>Hubungi Kami</h2>
+      <p>Jika Anda memiliki pertanyaan, kritik, atau saran, silakan hubungi kami melalui formulir berikut atau informasi kontak yang tersedia.</p>
+      
+      <ul>
+        <li><strong>Alamat:</strong> Jl. Contoh No.123, Sumenep</li>
+        <li><strong>Email:</strong> izam.com</li>
+        <li><strong>Telepon:</strong> +62 812-3456-7890</li>
+        <li><strong>Jam Operasional:</strong> Senin - Jumat, 09.00 - 17.00</li>
+      </ul>
+    </div>
+
+    <div class="kontak-form">
+      <h2>PESAN DI SINI</h2><br>
+    <form id="formKontak" action="#" method="post">
+      <label for="nama">Nama Lengkap</label>
+      <input type="text" id="nama" name="nama" placeholder="Nama Anda" required />
+
+      <label for="wa">Nomor WhatsApp</label>
+      <input type="tel" id="wa" name="wa" placeholder="08xxxxxxxxxx" pattern="08[0-9]{8,12}" required />
+
+      <label for="Alamat">Alamat</label>
+      <input type="text" id="Alamat" name="Alamat" placeholder="Alamat Anda" required />
+      
+      <label for="pertanyaan">Pertanyaan</label>
+      <input type="text" id="pertanyaan" name="pertanyaan" placeholder="pertanyaan" required />
+
+      <label for="pesan">Pesanan</label>
+      <textarea id="pesan" name="pesan" rows="5" placeholder="Tulis pesan Anda..." required></textarea>
+
+      <button type="submit">Kirim Pesanan</button>
+    </form>
+  </div>
+
+  <div id="output"></div>
+
+  </section>
+
+
+<script src="style.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KEDAI MAKANAN DAN CAMILAN</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Navbar -->
+  <nav class="navbar">
+    
+<nav class="navbar"></nav>  
+    <header class="logo-header">
+  <h1 class="logo-text">KEDAI MAKANAN DAN CAMILAN </h1>
+</header>
+    <ul>
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="produk.html">Produk</a></li>
+      <li><a href="promo.html" >Promo</a></li>
+      <li><a href="kontak.html">Pesan Di Sini</a></li>
+    </ul>
+
+<!-- Media Sosial -->
+<footer class="footer-social">
+  <div class="social-icons">
+    <a href="https://facebook.com/namamu" target="_blank" aria-label="Facebook">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#fff" viewBox="0 0 24 24">
+        <path d="M22.675 0h-21.35C.594 0 0 .593 0 1.326v21.348C0 23.407.594 24 1.325 24H12.82v-9.294H9.692V11.01h3.128V8.412c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.463.099 2.794.143v3.24h-1.918c-1.505 0-1.797.715-1.797 1.764v2.313h3.594l-.468 3.696h-3.126V24h6.126C23.406 24 24 23.407 24 22.674V1.326C24 .593 23.406 0 22.675 0z"/>
+      </svg>
+    </a>
+    <a href="https://instagram.com/namamu" target="_blank" aria-label="Instagram">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"  fill="#fff" viewBox="0 0 24 24">
+        <path d="M12 2.2c3.2 0 3.584.012 4.85.07 1.17.056 1.796.24 2.215.401a4.408 4.408 0 011.577.997 4.409 4.409 0 01.997 1.577c.161.42.345 1.045.401 2.215.058 1.266.07 1.65.07 4.85s-.012 3.584-.07 4.85c-.056 1.17-.24 1.796-.401 2.215a4.408 4.408 0 01-.997 1.577 4.409 4.409 0 01-1.577.997c-.42.161-1.045.345-2.215.401-1.266.058-1.65.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.056-1.796-.24-2.215-.401a4.408 4.408 0 01-1.577-.997 4.409 4.409 0 01-.997-1.577c-.161-.42-.345-1.045-.401-2.215C2.212 15.584 2.2 15.2 2.2 12s.012-3.584.07-4.85c.056-1.17.24-1.796.401-2.215a4.408 4.408 0 01.997-1.577 4.409 4.409 0 011.577-.997c.42-.161 1.045-.345 2.215-.401C8.416 2.212 8.8 2.2 12 2.2zm0-2.2C8.735 0 8.332.012 7.052.07 5.776.128 4.95.317 4.275.547a6.606 6.606 0 00-2.35 1.537A6.608 6.608 0 00.39 4.275c-.23.675-.419 1.5-.477 2.777C-.012 8.332 0 8.735 0 12c0 3.265.012 3.668.07 4.948.058 1.277.247 2.102.477 2.777a6.608 6.608 0 001.537 2.35 6.606 6.606 0 002.35 1.537c.675.23 1.5.419 2.777.477C8.332 23.988 8.735 24 12 24s3.668-.012 4.948-.07c1.277-.058 2.102-.247 2.777-.477a6.606 6.606 0 002.35-1.537 6.608 6.608 0 001.537-2.35c.23-.675.419-1.5.477-2.777.058-1.28.07-1.683.07-4.948 0-3.265-.012-3.668-.07-4.948-.058-1.277-.247-2.102-.477-2.777a6.608 6.608 0 00-1.537-2.35A6.606 6.606 0 0019.725.39c-.675-.23-1.5-.419-2.777-.477C15.668.012 15.265 0 12 0z"/>
+        <circle cx="12" cy="12" r="3.5"/>
+        <circle cx="18.5" cy="5.5" r="1.5"/>
+      </svg>
+    </a>
+    <a href="https://www.tiktok.com/@namamu" target="_blank" aria-label="TikTok">
+  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 48 48">
+    <path d="M41,16.1c-2.7,0-5.3-0.9-7.4-2.4c-2.2-1.6-3.9-3.8-4.8-6.3c-0.4-1.1-0.6-2.3-0.7-3.5H23v26.7
+      c0,2.5-2,4.5-4.5,4.5S14,32.9,14,30.3s2-4.5,4.5-4.5c0.6,0,1.2,0.1,1.7,0.3v-6.8c-0.6-0.1-1.1-0.1-1.7-0.1c-6.2,0-11.2,5-11.2,11.2
+      S12.3,41.5,18.5,41.5S29.7,36.5,29.7,30.3V20.5c3.4,2.2,7.5,3.5,11.8,3.5v-7.9H41z"/>
+  </svg>
+</a>
+  </div>
+</footer>
+ </nav>
+
+  <section class="kontak-container">
+    <div class="kontak-info">
+      <h2>Hubungi Kami</h2>
       <p>Jika Anda memiliki pesanan, dan pertanyaan, silakan hubungi kami melalui 
         formulir berikut atau informasi kontak yang tersedia.</p>
       
