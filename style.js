@@ -75,25 +75,18 @@ document.addEventListener('DOMContentLoaded', function () {
     const pertanyaan = form.querySelector('input[name="pertanyaan"]').value.trim();
     const pesanan = form.querySelector('textarea[name="pesan"]').value.trim();
 
-    // Validasi hanya nama, WA, dan alamat yang wajib
     if (nama === '' || whatsapp === '' || alamat === '') {
       alert('Kolom wajib (nama, WA, alamat) harus diisi.');
       return;
     }
 
     const nomorAdmin = '6285791436166';
-
     let pesanWA = `Halo Admin, saya *${nama}*.\n` +
                   `No WA: *${whatsapp}*\n` +
                   `Alamat: *${alamat}*\n`;
 
-    if (pertanyaan !== '') {
-      pesanWA += `Pertanyaan:\n${pertanyaan}\n`;
-    }
-
-    if (pesanan !== '') {
-      pesanWA += `Pesanan:\n${pesanan}`;
-    }
+    if (pertanyaan) pesanWA += `Pertanyaan:\n${pertanyaan}\n`;
+    if (pesanan) pesanWA += `Pesanan:\n${pesanan}`;
 
     const urlWA = `https://wa.me/${nomorAdmin}?text=${encodeURIComponent(pesanWA)}`;
 
@@ -107,7 +100,8 @@ document.addEventListener('DOMContentLoaded', function () {
       </div>
     `;
 
-    form.reset();
+    // Coba buka WA
     window.open(urlWA, '_blank');
   });
 });
+
