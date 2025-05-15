@@ -72,6 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const nama = form.querySelector('input[name="nama"]').value.trim();
         const whatsapp = form.querySelector('input[name="wa"]').value.trim();
         const alamat = form.querySelector('input[name="Alamat"]').value.trim();
+        const pertanyaan = form.querySelector('input[name="pertanyaan"]').value.trim();
         const pesanan = form.querySelector('textarea[name="pesan"]').value.trim();
 
         if (nama === '' || whatsapp === '' || alamat === '' || pesanan === '') {
@@ -80,13 +81,18 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         const nomorAdmin = '6285791436166';
+
         const pesanWA = 
           `Halo Admin, saya *${nama}*.\n` +
           `No WA: *${whatsapp}*\n` +
           `Alamat: *${alamat}*\n` +
-          `pertanyan:\n${pesanapertanyan}`;
           `Pesanan:\n${pesanan}`;
 
+           if (pertanyaan !== '') {
+    pesanWA += `Pertanyaan:\n${pertanyaan}\n`;
+
+    pesanWA += `Pesanan:\n${pesanan}`;
+  }
 
         const urlWA = `https://wa.me/${nomorAdmin}?text=${encodeURIComponent(pesanWA)}`;
 
