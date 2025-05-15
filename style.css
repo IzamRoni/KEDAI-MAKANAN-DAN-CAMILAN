@@ -233,7 +233,7 @@ p {
   object-fit: cover;
 }
 
-.produk-item h3, {
+.produk-item h3 {
   font-size: 1.5rem;
   color: #000000;
   margin: 15px 0;
@@ -515,79 +515,68 @@ p {
 
 
 
-
-
-
 /* RESPONSIF: Android / layar kecil */
-@media screen and (max-width: 480px) {
- .navbar {
+@media (max-width: 768px) {
+  .navbar {
     flex-direction: column;
     align-items: center;
-  }
-
-  .nav-menu {
-    flex-direction: column;
-    align-items: center;
-    margin: 10px 0;
-  }
-
-  ul li a {
-    font-size: 14px; /* Mengurangi ukuran font untuk menu di perangkat kecil */
-  }
-
-
- 
-  .social-icons {
-    justify-content: center;   /* ✅ Pusatkan secara horizontal */
     text-align: center;
-    margin: 10px 0;
   }
 
-
- .promo-list {
-    padding: 0 20px; /* Lebih sempit di layar kecil */
-    flex-direction: column; /* Atur jadi kolom */
-    align-items: center;     /* Tengahin isi */
+  .logo-header {
+    order: 1;
+    width: 100%;
+    margin-bottom: 10px;
   }
 
-  .promo-card {
-    width: 100%;             /* Full lebar layar */
-    max-width: 400px;        /* Biar nggak terlalu lebar */
+  .logo-text {
+    text-align: center;
+    font-size: 24px;
   }
 
-  .promo-card img {
-    height: auto;            /* Hindari fixed height */
+  .navbar ul {
+    order: 2;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
   }
 
-
-.kontak-container {
-    flex-direction: column; /* ✅ Ubah arah flex menjadi kolom */
-    align-items: center; /* Agar konten berada di tengah */
+  .navbar ul li a {
+    font-size: 20px;
+    padding: 8px 10px;
   }
 
-  .kontak-info, .kontak-form {
-    margin-right: 0; /* Menghilangkan margin kanan pada mode mobile */
-    width: 100%; /* Mengatur lebar kontainer menjadi 100% */
-    margin-bottom: 20px; /* Memberikan jarak antar kolom */
+  .footer-social {
+    order: 3;
+    text-align: center;
+    margin-top: 10px;
+    width: 100%;
   }
 
-  .kontak-info {
-    margin-bottom: 20px; /* Memberikan jarak antara info dan form */
+  .social-icons {
+    justify-content: center;
+    margin: 0 auto;
   }
 
-  .background .content h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-/* Hindari scroll horizontal */
-body {
-  overflow-x: hidden;
-}
+  .background,
+  .promo-list,
+  .kontak-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
 
-/* Pastikan semua elemen tidak melebar melebihi layar */
-* {
-  box-sizing: border-box;
-}
-{transform: translate(240px, 0); 
-}
+  .promo-card,
+  .kontak-info,
+  .kontak-form {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .produk-grid {
+    grid-template-columns: 1fr;
+  }
 }
