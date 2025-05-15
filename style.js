@@ -100,8 +100,6 @@ document.addEventListener('DOMContentLoaded', function () {
       </div>
     `;
 
-    // Coba buka WA
     window.open(urlWA, '_blank');
   });
 });
-
