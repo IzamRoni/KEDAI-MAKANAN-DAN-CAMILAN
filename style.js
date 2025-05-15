@@ -84,7 +84,9 @@ document.addEventListener('DOMContentLoaded', function () {
           `Halo Admin, saya *${nama}*.\n` +
           `No WA: *${whatsapp}*\n` +
           `Alamat: *${alamat}*\n` +
+          `pertanyan:\n${pesanapertanyan}`;
           `Pesanan:\n${pesanan}`;
+
 
         const urlWA = `https://wa.me/${nomorAdmin}?text=${encodeURIComponent(pesanWA)}`;
 
